@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.page{
+    display:none;
+    width:90%;
+    max-width:500px;
+    padding:30px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    color:white;
+}
+
+.page.active{
+    display:block;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+button{
+    margin:8px;
+    padding:12px 20px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#ff4d6d;
+    font-size:16px;
+    cursor:pointer;
+}
+
+textarea{
+    width:100%;
+    height:80px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    padding:10px;
+}
+
+.heart{
+    font-size:60px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    50%{transform:scale(1.2);}
+}
+</style>
+</head>
+<body>
+
+<!-- Page 1 -->
+<div class="page active" id="page1">
+    <h1>Finally u came 🥹💗</h1>
+    <p>I've been missing u the whole day...</p>
+    <br>
+    <button onclick="nextPage(2)">Continue ❤️</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+    <h1>You know what I did today? 😔</h1>
+    <p>I missed ur signal and ur texts the whole day 💗</p>
+    <br>
+    <button onclick="nextPage(3)">Aww 🥺</button>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="page3">
+    <h1>How was ur day? 💕</h1>
+
+    <button onclick="showWhy()">Good 😊</button>
+    <button onclick="showWhy()">Very Good 😍</button>
+    <button onclick="showWhy()">Baddd 😭</button>
+    <button onclick="showWhy()">Average 😶</button>
+
+    <div id="whyBox" style="display:none;">
+        <br>
+        <h3>Why?? 🥺</h3>
+        <textarea placeholder="Tell me about your day..."></textarea>
+        <br><br>
+        <button onclick="nextPage(4)">Next ❤️</button>
+    </div>
+</div>
+
+<!-- Page 4 -->
+<div class="page" id="page4">
+    <div class="heart">💗</div>
+    <h1>I missed u 💗</h1>
+    <h2>I lobbb uuuuu 🥹❤️</h2>
+</div>
+
+<script>
+function nextPage(num){
+    document.querySelectorAll('.page').forEach(p=>{
+        p.classList.remove('active');
+    });
+    document.getElementById('page'+num).classList.add('active');
+}
+
+function showWhy(){
+    document.getElementById('whyBox').style.display='block';
+}
+</script>
+
+</body>
+</html>
+ 
