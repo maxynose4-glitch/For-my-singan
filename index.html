@@ -85,7 +85,7 @@ textarea{
 <!-- Page 2 -->
 <div class="page" id="page2">
     <h1>You know what I did today? 😔</h1>
-    <p>I missed ur signal and ur texts the whole day 💗</p>
+    <p>I missed ur sigan and ur texts the whole day i became very lonely💗</p>
     <br>
     <button onclick="nextPage(3)">Aww 🥺</button>
 </div>
@@ -109,13 +109,29 @@ textarea{
 </div>
 
 <!-- Page 4 -->
-<div class="page" id="page4">
+div class="page" id="page4">
     <div class="heart">💗</div>
+
     <h1>I missed u 💗</h1>
     <h2>I lobbb uuuuu 🥹❤️</h2>
-</div>
 
-<script>
+    <br><br>
+
+    <h3>Did u miss me and lob me?? 🥺💞</h3>
+
+    <button onclick="showAnswer()">Yes 💗</button>
+    <button onclick="showAnswer()">Yes ofc 😚</button>
+    <button onclick="showAnswer()">Yessss so much 🥹❤️</button>
+
+    <div id="answerBox" style="display:none; margin-top:20px;">
+        <h2>Awwww 💗</h2>
+        <p>You just made my day better 😭❤️</p>
+        <p>I love youuuuu so much 💞</p>
+    </div>
+</div>
+<script>function showAnswer(){
+    document.getElementById("answerBox").style.display = "block";
+}
 function nextPage(num){
     document.querySelectorAll('.page').forEach(p=>{
         p.classList.remove('active');
